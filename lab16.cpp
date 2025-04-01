@@ -1,13 +1,9 @@
 // Code to implement the gcf function goes here
 int gcf(int a, int b) {
-  int q = a/b;
-  int r = a%b;
-  if (r != 0) {
-    a = b;
-    b = q;
-
+  if (b == 0) {
+    return a;
   }
   else {
-    return b;
+    return gcf(b, a % b);
   }
 }
